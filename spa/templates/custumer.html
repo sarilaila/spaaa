@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        Data Custumer
+        <a href="{% url 'tambah-custumer'%}" class="btn btn-primary">Tambah</a>
+      </h3>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Nomer Hp</th>
+            <th>Tgl</th>
+            <th>Keterangan</th>
+            <th>Kategori</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr {% for custumer in custumer %}>
+            <td><a href="{% url 'ubah-custumer' custumer.id %}">{{ custumer }}</a></td>
+            <td>{{custumer.alamat}}</td>
+            <td>{{ custumer.no_hp }}</td>
+            <td>{{custumer.tgl}}</td>
+            <td>{{custumer.keterangan}}</td>
+            <td>{{custumer.kategori}}</td>
+          </tr {%endfor%}>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- <h2>Daftar custumer</h2>
+
+{% for custum in custumer %}
+<li>{{ custum }}</li>
+{% endfor %} -->
+
+<!-- {{ alamat }} -->
+
+{% endblock %}

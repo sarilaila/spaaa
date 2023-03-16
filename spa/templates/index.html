@@ -1,0 +1,31 @@
+{% extends 'front.html' %} {% block content %}
+<div class="content">
+  <h1>Max Your Beauty<br /><span>With Our Best</span> <br />Service</h1>
+  <p class="par">
+    Nggak PD akhir-akhir ini? Ayo, manjakan diri Anda <br />dengan paket
+    perawatan tubuh terbaik agar rasa percaya diri kembali lagi!
+  </p>
+
+  <button class="cn"><a href="#">ORDER NOW</a></button>
+
+  <div class="form">
+    {% for message in messages %} {% if message.tags == 'warning' %}
+    <h2>{{ message }}</h2>
+    {% endif %} {% endfor %}
+    <h2>Order Here</h2>
+
+    <!-- <input type="input" name="email" placeholder="Masukan Nama">
+    <input type="input" name="" placeholder="Masukan Alamat">
+    <input type="input" name="" placeholder="Masukan Tanggal">
+    <input type="input" name="" placeholder="Masukan Keterangan">
+    <input type="input" name="" placeholder="Pilih Kategori">
+    <button class="btnn"><a href="#">Login</a></button> -->
+    <form action="" method="post">
+      {% csrf_token %} {{form.as_p}}
+
+      <button class="btnn">Order</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
