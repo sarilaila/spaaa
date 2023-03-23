@@ -5,7 +5,6 @@ from django.contrib  import messages
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 
-@login_required(login_url=settings.LOGIN_URL)
 def index(request):
     if request.POST:
         form = FormCustumer(request.POST)
@@ -29,9 +28,11 @@ def index(request):
 
     return render(request, 'index.html', konteks)
 
-@login_required(login_url=settings.LOGIN_URL)
 def service(request):
     return render(request, 'service.html')
+
+def contact(request):
+    return render(request, 'contact.html')
 
 @login_required(login_url=settings.LOGIN_URL)
 def ubah_custumer(request, id_custumer):

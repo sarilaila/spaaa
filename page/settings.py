@@ -127,3 +127,4 @@ STATICFILES_DIRS =[
 LOGIN_REDIRECT_URL = 'custumer'
 
 LOGIN_URL ='masuk'
+

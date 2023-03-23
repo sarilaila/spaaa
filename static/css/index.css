@@ -106,7 +106,11 @@ ul li a:hover {
   cursor: pointer;
 }
 .btn:hover {
-  color: #000;
+  color: white;
+  background-color: #f4974c;
+  border: 2px solid #f4974c;
+  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .btn:focus {
@@ -269,4 +273,33 @@ ul li a:hover {
 }
 .icons ion-icon:hover {
   color: #ff7200;
+}
+
+h1.k:before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+
+h1.k:before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+
+h1.k:before {
+  border-bottom: 4px solid #ff7200;
+}
+.my-icon {
+  fill: white;
+  color: white;
+}
+.my-icon:hover {
+  fill: #ff7200;
 }
