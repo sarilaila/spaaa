@@ -54,7 +54,7 @@ def ubah_custumer(request, id_custumer):
 
 @login_required(login_url=settings.LOGIN_URL)
 def custumer(request):
-    custumer = Custumer.objects.all()
+    custumer = Custumer.objects.order_by('-id')
 
     konteks = {
         'custumer': custumer,
